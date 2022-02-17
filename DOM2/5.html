@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        phan7om
+    </title>
+
+    <!-- Import jQuery cdn library -->
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var max_length = 25;
+            $('textarea').keyup(function () {
+                var len = max_length - $(this).val().length;
+                $('.GFG').text(len);
+            });
+
+        });
+    </script>
+</head>
+
+<body style="text-align: center;">
+    <h1 style="color: orange;">
+        Rags To Riches
+    </h1>
+
+
+    <form>
+
+<p>Maximum input characters: 25</p>
+
+
+        <textarea maxlength="25"></textarea>
+
+
+<p>
+            <span class="GFG">25</span>
+            Characters Remaining
+        </p>
+
+    </form>
+</body>
+
+</html>

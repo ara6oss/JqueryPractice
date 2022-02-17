@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Форма регистрации</title>
+		<meta charset="utf-8">
+<style type="text/css">
+[title="err"]{
+  border: solid 2px red;
+}
+
+</style>
+	</head>
+	<body>
+		<form class="form" action="address.txt" method="get" >
+	 	    <input id="password" name="password" type="password" placeholder="Пароль"  >
+			<input id="password-check" name="password-check" type="password" placeholder="Подтверждение пароля" title="" >
+			<input id="submit" name="submit" type="submit" value="Создать аккаунт">
+		</form>
+		<script>
+      document.addEventListener('DOMContentLoaded', function () {
+
+       var pass1 = document.querySelector('#password'),
+
+           pass2 = document.querySelector('#password-check')
+
+       pass1.addEventListener('input', function () {
+
+           this.value != pass2.value ? pass2.setCustomValidity('Password incorrect') : pass2.setCustomValidity('')
+
+       })
+
+       pass2.addEventListener('input', function (e) {
+
+           this.value != pass1.value ? this.setCustomValidity('Password incorrect') : this.setCustomValidity('')
+
+       })
+
+   })
+
+
+
+               });
+		</script>
+	</body>
+</html>
